@@ -1,0 +1,59 @@
+.header {
+  background-color: $white;
+  padding: 0 2rem;
+  border-top: 5px solid $green;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $green;
+  }
+
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    width: 16rem;
+    color: $darked;
+    text-decoration: none;
+
+    &-sup {
+      font-size: $s32;
+      text-transform: uppercase;
+      line-height: 3.2rem;
+      color: $dark-light;
+    }
+    &-sub {
+      font-size: $s12;
+      line-height: 1.2rem;
+    }
+  }
+
+  .active {
+    background-color: $green;
+    color: $white;
+  }
+
+  &__nav {
+    width: 65.5rem;
+
+    &-list {
+      display: flex;
+    }
+
+    &-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $darked;
+      text-transform: uppercase;
+      padding: 3rem 2rem;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: $green;
+        color: $white;
+      }
+    }
+  }
+}

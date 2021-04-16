@@ -1,0 +1,118 @@
+.slider {
+  padding-top: 4rem;
+  position: relative;
+
+  &__row {
+    border-bottom: 1px solid #e2e2e2;
+    padding-bottom: 7.4rem;
+  }
+
+  &__text {
+    font-size: $s22;
+    line-height: 3.1rem;
+    text-align: center;
+    width: 71rem;
+    margin: 0 auto 4rem;
+  }
+
+  .swiper-container {
+    width: 92.2rem;
+    height: 35rem;
+  }
+  .swiper-slide {
+    position: relative;
+  }
+
+  .swiper-pagination {
+    bottom: 4rem;
+    right: 50%;
+
+    &-bullet {
+      $size: 1.5rem;
+      width: $size;
+      height: $size;
+      background-color: $green;
+      opacity: 1;
+      margin-right: 5px;
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &-active {
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          display: block;
+          $size: 0.9rem;
+          width: $size;
+          height: $size;
+          background-color: $white;
+          border-radius: 50%;
+          top: 0.3rem;
+          left: 0.3rem;
+
+          // transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+
+  &-button-prev,
+  &-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    $size: 4.9rem;
+    width: $size;
+    height: $size;
+    background-color: $black;
+    border-radius: 50%;
+    border: 2px solid $green;
+    z-index: 1;
+    cursor: pointer;
+  }
+
+  &-button-prev {
+    left: 1rem;
+  }
+
+  &-button-next {
+    right: 1rem;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__title {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 10.2rem;
+    right: 6rem;
+    font-size: $s22;
+    line-height: 3.1rem;
+    color: $white;
+    background-color: $green;
+    text-transform: capitalize;
+    width: 35rem;
+    height: 4rem;
+  }
+
+  &__sometext {
+    position: absolute;
+    right: 6rem;
+    bottom: 2.3rem;
+    display: flex;
+    width: 35rem;
+    background-color: $white;
+    padding: 1.4rem;
+    line-height: 1.4rem;
+  }
+}
